@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Store A</title>
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- HEADER -->
+<header>
+  <div class="row">
+    <h1>Browse Available Books</h1>
+    <nav class="filter-nav">
+      <ul>
+        <li><a href="#" class="filter-menu-active">All Books</a></li>
+        <li><a href="#">Most Recent</a></li>
+        <li><a href="#">Most Popular</a></li>
+        <li><a href="#">Free Books</a></li>
+      </ul>
+      <div class="search-input">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" placeholder="Enter Keywords">
+      </div>
+    </nav>
+  </div>
+</header>
+<div>
+  <!--
+        <ul class="pegination">
+          <li class="page-item"><a href="#">Previous</a></li>
+
+          <li class="page-item">
+            <a class="pegination-active" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="pegination-active" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="pegination-active" href="#">3</a>
+          </li>
+
+          <li class="page-item"><a href="#">Next</a></li>
+        </ul>
+  -->
+</div>
+<!-- ADD BOOK MENU -->
+<!--
+<div class="add-book-menu">
+
+	<form>
+		<label for="title">Title*</label>
+		<input type="text" name="title">
+		<div class="formErrorMsg"></div>
+
+		<label for="author">Author*</label>
+		<input type="text" name="author">
+		<div class="formErrorMsg"></div>
+
+		<label for="price">Price* in $</label>
+		<input type="text" name="price">
+		<div class="formErrorMsg"></div>
+
+		<label for="image">Image</label>
+		<input type="text" name="image" placeholder="Please eneter image url">
+		<div class="formErrorMsg"></div>
+
+		<label for="description">Description</label>
+		<textarea type="text" name="description"></textarea>
+		<div class="formErrorMsg"></div>
+
+		<div class="buttons">
+			<input type="submit" value="Save">
+		</div>
+	</form>
+</div>
+-->
+<!-- MAIN DATA -->
+<div class="view">
+  <div class="row">
+    <div class="display-data">
+
+      <div class="book">
+        <a href="#">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <div class="image-container">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-th-list" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <div class="free">Free</div>
+            <div class="payed">5 $</div>
+            <div class="trans-back"></div>
+            <img src="img/TheJewelsOfTheNizam.jpg" alt="Book Cover">
+          </div>
+          <h2>The Jewels Of The Nizam</h2>
+          <span>by Manohar Pandey</span>
+          <div class="stars">
+            <i class="fa fa-star star1" aria-hidden="true"></i>
+            <i class="fa fa-star star2" aria-hidden="true"></i>
+            <i class="fa fa-star star3" aria-hidden="true"></i>
+            <i class="fa fa-star star4" aria-hidden="true"></i>
+            <i class="fa fa-star star5" aria-hidden="true"></i>
+          </div>
+        </a>
+      </div>
+
+      <!--
+      <div class="book-display">
+        <div class="book-img">
+          <img ng-src="https://www.goodworklabs.com/wp-content/uploads/2017/05/9a_Angular-JS-development.jpg" alt="Book Cover">
+
+        </div>
+        <div class="book-info">
+          <h2>Learn AngularJS</h2>
+          <div class="book-author">By Edin Causevic</div>
+          <div>
+            <i class="fa fa-star star1" aria-hidden="true"></i>
+            <i class="fa fa-star star2" aria-hidden="true"></i>
+            <i class="fa fa-star star3" aria-hidden="true"></i>
+            <i class="fa fa-star star4" aria-hidden="true"></i>
+            <i class="fa fa-star star5" aria-hidden="true"></i>
+          </div>
+          <div class="price"> 5 $ </div>
+          <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nihil, eum, vitae libero rerum quis nostrum natus dolore culpa nemo suscipit. Fuga temporibus deleniti, nihil nam incidunt? Pariatur, vitae, impedit.</div>
+        </div>
+      </div>
+      -->
+
+    </div>
+  </div>
+</div>
+<!-- ASIDE MENU -->
+<aside id="aside-menu">
+  <div class="aside-box">
+    <button class="btn-big"><i class="fa fa-plus" aria-hidden="true"></i> Add a Book</button>
+  </div>
+  <hr />
+  <div class="aside-box">
+    <ul class="side-menu">
+      <li class="active-aside">
+        <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Browse Books</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart <span>(0)</span></a>
+      </li>
+      <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Favourite <span>(0)</span></a></li>
+      <li><a href="#"><i class="fa fa-th-list" aria-hidden="true"></i> Wishlist <span>(0)</span></a></li>
+      <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> History</a></li>
+    </ul>
+  </div>
+  <hr />
+  <div class="aside-box">
+    <ul class="aside-submenu">
+      <li><i class="fa fa-circle red" aria-hidden="true"></i> Must Read Titles</li>
+      <li><i class="fa fa-circle yellow" aria-hidden="true"></i> Best Of List</li>
+      <li><i class="fa fa-circle lightblue" aria-hidden="true"></i> Classic Novels</li>
+      <li><i class="fa fa-circle darkblue" aria-hidden="true"></i> Non Fiction</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="aside-box">
+    <p>You added <a href="#">Fight Club</a> by <a href="#">Chuck Palahniuk</a> to your <a href="#">Must Read Titles</a>.</p>
+    <span>24 minutes ago</span>
+    <p>You added <a href="#">The Trial</a> by <a href="#">Franz Kafka</a> to your <a href="#">Must Read Titles</a>.</p>
+    <span>48 minutes ago</span>
+  </div>
+</aside>
+<div class="transparent-background"></div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="book" ng-repeat="book in books | filter: searchText track by $index">
+    <a href="javascript:;">
+        <i class="fa fa-times" ng-show="false" aria-hidden="true"></i>
+        <div class="image-container">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-th-list" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <div class="free" ng-show="book.price == 0">Free</div>
+            <div class="payed" ng-show="book.price != 0">$ {{book.price}}</div>
+            <div class="trans-back" ng-click="displayBook(book)" title="{{book.title}} - {{book.author}}"></div>
+            <img ng-src="{{book.image}}" onerror="this.src='assets/img/book-default.jpg'" alt="assets/img/book-default.jpg">
+        </div>
+        <h2 title="{{book.title}} - {{book.author}}" ng-click="displayBook(book)">{{book.title | trimText:15}}</h2>
+        <span title="{{book.title}} - {{book.author}}" ng-click="displayBook(book)">by {{book.author | trimText:20}}</span>
+        <div class="stars">
+            <i class="fa fa-star star1" ng-class="{'star' : book.stars > 0}" aria-hidden="true"></i>
+            <i class="fa fa-star star2" ng-class="{'star' : book.stars > 1}" aria-hidden="true"></i>
+            <i class="fa fa-star star3" ng-class="{'star' : book.stars > 2}" aria-hidden="true"></i>
+            <i class="fa fa-star star4" ng-class="{'star' : book.stars > 3}" aria-hidden="true"></i>
+            <i class="fa fa-star star5" ng-class="{'star' : book.stars > 4}" aria-hidden="true"></i>
+        </div>
+    </a>
+</div>

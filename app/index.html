@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html ng-app="bookstore">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookstore</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+</head>
+<body ng-controller="mainController">
+<!-- HEADER -->
+<header>
+    <div class="row">
+        <h1>{{title()}}</h1>
+        <nav class="filter-nav">
+            <ul>
+                <li><a href="#/" ng-class="{'filter-menu-active': route === '/'}">All Books</a></li>
+                <li><a href="#/most-recent" ng-class="{'filter-menu-active': route === '/most-recent'}">Most Recent</a></li>
+                <li><a href="#/most-popular" ng-class="{'filter-menu-active': route === '/most-popular'}">Most Popular</a></li>
+                <li><a href="#/free-books" ng-class="{'filter-menu-active': route === '/free-books'}">Free Books</a></li>
+            </ul>
+            <div class="search-input">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Enter Keywords" ng-model="searchText">
+            </div>
+        </nav>
+    </div>
+</header>
+<div>
+    <!--
+          <ul class="pegination">
+            <li class="page-item"><a href="#">Previous</a></li>
+
+            <li class="page-item">
+              <a class="pegination-active" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="pegination-active" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="pegination-active" href="#">3</a>
+            </li>
+
+            <li class="page-item"><a href="#">Next</a></li>
+          </ul>
+    -->
+</div>
+<!-- ADD BOOK MENU -->
+<!--
+<div class="add-book-menu">
+
+	<form>
+		<label for="title">Title*</label>
+		<input type="text" name="title">
+		<div class="formErrorMsg"></div>
+
+		<label for="author">Author*</label>
+		<input type="text" name="author">
+		<div class="formErrorMsg"></div>
+
+		<label for="price">Price* in $</label>
+		<input type="text" name="price">
+		<div class="formErrorMsg"></div>
+
+		<label for="image">Image</label>
+		<input type="text" name="image" placeholder="Please eneter image url">
+		<div class="formErrorMsg"></div>
+
+		<label for="description">Description</label>
+		<textarea type="text" name="description"></textarea>
+		<div class="formErrorMsg"></div>
+
+		<div class="buttons">
+			<input type="submit" value="Save">
+		</div>
+	</form>
+</div>
+-->
+<!-- MAIN DATA -->
+<div class="view">
+    <div class="row">
+        <div class="display-data">
+            <ng-view></ng-view>
+        </div>
+    </div>
+</div>
+<!-- ASIDE MENU -->
+<aside id="aside-menu">
+    <div class="aside-box">
+        <button class="btn-big"><i class="fa fa-plus" aria-hidden="true"></i> Add a Book</button>
+    </div>
+    <hr/>
+    <div class="aside-box">
+        <ul class="side-menu">
+            <li class="active-aside">
+                <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Browse Books</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart <span>(0)</span></a>
+            </li>
+            <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Favourite <span>(0)</span></a></li>
+            <li><a href="#"><i class="fa fa-th-list" aria-hidden="true"></i> Wishlist <span>(0)</span></a></li>
+            <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> History</a></li>
+        </ul>
+    </div>
+    <hr/>
+    <div class="aside-box">
+        <ul class="aside-submenu">
+            <li><i class="fa fa-circle red" aria-hidden="true"></i> Must Read Titles</li>
+            <li><i class="fa fa-circle yellow" aria-hidden="true"></i> Best Of List</li>
+            <li><i class="fa fa-circle lightblue" aria-hidden="true"></i> Classic Novels</li>
+            <li><i class="fa fa-circle darkblue" aria-hidden="true"></i> Non Fiction</li>
+        </ul>
+    </div>
+    <hr/>
+    <div class="aside-box">
+        <p>You added <a href="#">Fight Club</a> by <a href="#">Chuck Palahniuk</a> to your <a href="#">Must Read
+            Titles</a>.</p>
+        <span>24 minutes ago</span>
+        <p>You added <a href="#">The Trial</a> by <a href="#">Franz Kafka</a> to your <a href="#">Must Read Titles</a>.
+        </p>
+        <span>48 minutes ago</span>
+    </div>
+</aside>
+<div class="transparent-background"></div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

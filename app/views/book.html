@@ -1,0 +1,18 @@
+<div class="book-display">
+    <div class="book-img">
+        <img ng-src="{{bookData.image}}" alt="Book Cover">
+    </div>
+    <div class="book-info">
+        <h2>{{bookData.title}}</h2>
+        <div class="book-author">By {{bookData.author}}</div>
+        <div>
+            <i class="fa fa-star star1" ng-class="{'star' : bookData.stars > 0}" aria-hidden="true"></i>
+            <i class="fa fa-star star2" ng-class="{'star' : bookData.stars > 1}" aria-hidden="true"></i>
+            <i class="fa fa-star star3" ng-class="{'star' : bookData.stars > 2}" aria-hidden="true"></i>
+            <i class="fa fa-star star4" ng-class="{'star' : bookData.stars > 3}" aria-hidden="true"></i>
+            <i class="fa fa-star star5" ng-class="{'star' : bookData.stars > 4}" aria-hidden="true"></i>
+        </div>
+        <div class="price"> $ {{bookData.price}} </div>
+        <div class="description">{{bookData.description}}</div>
+    </div>
+</div>
